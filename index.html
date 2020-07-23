@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Quote Shuffle</title></head>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="index.css">
+  <head>
+    <title>Quote Shuffle</title></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./favicon.ico">
   <body>
     <div id="app">
       <div id="child">
         <div id="container">
           <div id="quote-box">
-            <i class="fa fa-quote-left"  aria-hidden="true"></i> 
-            <p id="text"></p>
+            <p id="text"> <span><i class="fa fa-quote-left" aria-hidden="true"></i></span> <span id="quote"></span> </p>
               <p id="author"></p>
               <button class="fa fa-twitter">
               <a id="tweet-quote" href="twitter.com/intent/tweet"></a></button>
@@ -21,52 +21,6 @@
       </div>
     </div>
   </body>
-    <script>
-
-    var quotes = ['The ocean is made of drops.',
-        'Not quite my tempo.',
-        'Hell is made for people like you.',
-        'Live as if you were to die tomorrow. Learn as if you were to live forever.',
-        'That which does not kill us makes us stronger.',
-        'Be who you are and say what you feel, because those who mind don’t matter and those who matter don’t mind.',
-        'We must not allow other people’s limited perceptions to define us.',
-        'Do what you can, with what you have, where you are.',
-        'Be yourself; everyone else is already taken.',
-        'This above all: to thine own self be true.',
-        'If you cannot do great things, do small things in a great way.',
-        'If opportunity doesn’t knock, build a door.'
-      ];
-
-    var authors = ['Moana',
-    'Whiplash',
-    'Friends',
-    'Moana',
-    'Mahatma Gandhi',
-    'Friedrich Nietzsche',
-    'Bernard M. Baruch',
-    'Virginia Satir',
-    'Theodore Roosevelt',
-    'Oscar Wilde',
-    'William Shakespeare',
-    'Napoleon Hill',
-    'Milton Berle'
-    ];
-    var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
-    var rand  = 1;
-
-    document.getElementById("author").innerHTML = authors[rand];
-    document.getElementById("text").innerHTML = quotes[rand];
-
-    document.querySelector("#new-quote").addEventListener('click', () => {
-
-      rand = Math.floor(Math.random() * Math.floor(12));
-      document.getElementById("author").innerHTML = '-' + authors[rand];
-      document.getElementById("text").innerHTML = '<i class="fa fa-quote-left"  aria-hidden="true"></i> ' + quotes[rand];
-      $("i").css("color", colors[rand]);
-      $("button, body").css("background-color", colors[rand]);
-
-    });
-
-    </script>
+    <script src="./index.js"></script>
 
 </html>
