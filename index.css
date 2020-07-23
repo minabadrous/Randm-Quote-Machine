@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body{
+  font-family: monospace;
+  line-height: 40px;
+  height: 100vh;
+  background-color:rgb(58, 149, 201);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  transition: 1s;
+}
+#quote-box{
+  grid-column: 1 / 2;
+  height: auto;
+  width: 540px;
+  text-align: center;
+  background-color: white;
+  padding: 35px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  border-radius: 10px;
+}
+#text{
+  font-size: 30px;
+  grid-column: 1 / 13;
+  margin-bottom: 5px;
+}
+#author{
+  font-size: 15px;
+  color: gray;
+  grid-column: 9 / 13;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  justify-self: end;
+}
+#tweet-quote{
+  grid-column: 1 / 2;
+}
+#new-quote{
+  grid-column: 11 / 13;
+}
+a{
+  text-decoration: none;
+}
+button{
+  font-family: monospace;
+  padding: 12px;
+  border-radius: 5px;
+  border: 0px solid white;
+  background-color: rgb(58, 149, 201);
+  color: white;
+  outline: none;
+  transition: 1s;
+}
+button:hover{
+  background-color: rgb(42, 121, 167);
+  cursor: pointer;
+  border: 0px solid white;
+}
+i{
+  color: rgb(58, 149, 201);
+  transition: 1s;
+}
